@@ -5,7 +5,14 @@ fn print_result(num: i32) {
 ////////// DO NOT CHANGE ABOVE HERE /////////
 
 // TODO: create `math!()` macro.
-
+macro_rules! math {
+    (($a:literal * $b:literal), plus, $c:expr) => {
+      $a*$b+$c 
+    };
+    (square $d:expr) => {
+      $d*$d
+    };
+}
 ////////// DO NOT CHANGE BELOW HERE /////////
 
 fn main() {
